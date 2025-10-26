@@ -1,0 +1,123 @@
+/* ------------------------- */
+/* PAGE BACKGROUNDS          */
+/* ------------------------- */
+
+/* Homepage Background */
+body.home-page {
+  background-image: url('bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* About Page Background */
+body.about-page {
+  background-image: url('opensky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Services Page Background */
+body.services-page {
+  background-image: url('pw.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ------------------------- */
+/* COMMON STYLES FOR ALL PAGES */
+/* ------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Header fixed at top */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+/* Landing Section (Homepage) */
+.landing {
+  padding-top: 120px;
+}
+
+/* Landing Sub-header */
+.landing p {
+  font-size: 24px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+/* About/Services Content */
+.about-content {
+  padding: 100px 20px 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5); /* semi-transparent */
+  color: black;                                  /* text color black */
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #66fcf1;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ------------------------- */
+/* PLANE ANIMATION (ONLY ABOUT PAGE) */
+/* ------------------------- */
+
+body.about-page .plane {
+  position: fixed;
+  bottom: -50px;       /* start slightly off-screen bottom */
+  left: -100px;        /* start slightly off-screen left */
+  width: 100px;        /* adjust size if needed */
+  animation: flyDiagonalOnce 6s linear 1 forwards; /* single run */
+  z-index: 500;
+}
+
+/* Keyframes: simple diagonal path */
+@keyframes flyDiagonalOnce {
+  0% {
+    transform: translate(0, 0); /* start bottom-left */
+  }
+  100% {
+    transform: translate(110vw, -110vh); /* exit top-right */
+  }
+}
+
+
+
+
